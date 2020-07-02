@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Footer from './footer'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main class="main">
+
+    <header>
+      <img src="https://1.bp.blogspot.com/-0e6pEwXW50I/Xvpahud34nI/AAAAAAABdyI/pYKA-hHnbIYvNOHbWpz2LYqmZw-3NUi2QCK4BGAsYHg/s320/chatapplogo.png" alt="logo" />
+      <span>Let's Chat</span>
+      <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Spartan"/>
+    </header>
+
+    <Footer />
+
+    </main>
   );
 }
 

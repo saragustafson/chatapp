@@ -1,38 +1,81 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, #root{
+  height:100%;
+  width:100%;
+  display:flex;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-family: 'Spartan', sans-serif;
+  font-size: 18px;
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background: rgb(211,191,218);
+  background: linear-gradient(0deg, rgba(211,191,218,1) 0%, rgba(158,116,175,1) 85%);
+  color:white;
+}
+.main{
+    display:flex;
+    flex:1;
+    width:100%;
+    flex-direction:column;
+    justify-content:space-between;
+}
+header{
+    height:40px;
+    border-bottom:0.5px solid white;
+    width:100%;
+    background:rgba(255,255,255,0.3);
+    display:flex;
+    align-items:center;
+}
+header img {
+    height: 28px;
+    margin: 0 7px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+footer {
+    flex-direction:column; 
+    background:rgba(255,255,255, 0.6);
+    height:38px;
+    border-top:0.5px solid white;
 }
 
-.App-link {
-  color: #61dafb;
+footer input{
+    position:absolute;
+    top:785px;
+    right:8px;
+    background:rgb(243,189,69);
+    border-style:solid;
+    border-color:rgb(158,116,175);
+    width:380px;
+    height:23px;
+    border-radius:14px;
+    padding-left: 10px;
+    font-family: 'Spartan', sans-serif;
+    font-size:12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer button{
+    background:white;
+    position:absolute;
+    top:787px;
+    right:10px;
+    width:19px;
+    height:19px;
+    border-radius:50%;
+    border-style:solid;
+    border-color:rgb(158,116,175);
+    padding:0px;
+    font-size:11px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
