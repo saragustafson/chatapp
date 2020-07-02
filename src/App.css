@@ -10,7 +10,7 @@ html, #root{
 
 body{
   font-family: 'Spartan', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   height:100%;
   width:100%;
   display:flex;
@@ -78,4 +78,19 @@ footer button{
     display:flex;
     align-items:center;
     justify-content:center;
+}
+
+div.msg{
+  background: white;
+  border-style:none;
+  height:30px;
+  width:200px;
+  margin-left:10px;
+  border-radius:12px;
+  color:black;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  padding-left:8px;
+  font-size:15px;
 }

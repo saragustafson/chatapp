@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Footer from './footer'
+import Message from './message'
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Spartan"/>
     </header>
+
+    <Message />
 
     <Footer />
 
