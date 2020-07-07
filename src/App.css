@@ -78,18 +78,28 @@ footer button{
     align-items:center;
     justify-content:center;
 }
+.msg{
+  width:60%;
+}
 
-div.msg{
+.msg-bubble{
   background: white;
   border-style:none;
-  height:30px;
-  width:200px;
-  margin-left:10px;
+  margin:5px;
   border-radius:12px;
   color:black;
   display:flex;
   align-items:center;
   justify-content:flex-start;
-  padding-left:8px;
+  padding:10px;
   font-size:15px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.messages{
+  overflow-y:scroll;
+  flex:1;
+  flex-direction:column-reverse;
+  display:flex;
 }
