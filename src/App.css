@@ -48,32 +48,31 @@ footer {
 }
 
 footer input{
-    position:absolute;
-    top:785px;
-    right:8px;
+    flex:1;
+    margin:6px 4px;
     background:rgb(243,189,69);
     border-style:solid;
     border-color:rgb(158,116,175);
-    width:380px;
     height:23px;
     border-radius:14px;
     padding-left: 10px;
     font-family: 'Spartan', sans-serif;
     font-size:12px;
+    width: 98%;
 }
 
 footer button{
     background:white;
     position:absolute;
-    top:787px;
-    right:10px;
-    width:19px;
-    height:19px;
+    top:789px;
+    right:13px;
+    width:21px;
+    height:21px;
     border-radius:50%;
     border-style:solid;
     border-color:rgb(158,116,175);
-    padding:0px;
-    font-size:11px;
+    padding:-1px;
+    font-size:14px;
     cursor:pointer;
     display:flex;
     align-items:center;

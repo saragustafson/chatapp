@@ -4,8 +4,9 @@ import Footer from './footer'
 import Message from './message'
 
 function App() {
+  const[messages,setMessages] = useState([])
   return (
-    <main class="main">
+    <main className="main">
 
     <header>
       <img src="https://1.bp.blogspot.com/-0e6pEwXW50I/Xvpahud34nI/AAAAAAABdyI/pYKA-hHnbIYvNOHbWpz2LYqmZw-3NUi2QCK4BGAsYHg/s320/chatapplogo.png" alt="logo" />
@@ -14,9 +15,11 @@ function App() {
           href="https://fonts.googleapis.com/css?family=Spartan"/>
     </header>
 
-    <Message />
+    {messages.map((m,i)=> <Message key={i} text={m} />)}
 
-    <Footer />
+    <Footer 
+      onSend={(text)=> setMessages([...messages, text])}
+    />
 
     </main>
   );
