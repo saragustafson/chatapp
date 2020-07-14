@@ -1,11 +1,27 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Footer from './footer'
 import Message from './message'
 import {initialize, useDatu} from 'datu'
+import {BrowserRouter, Route} from 'react-router-dom'
+import NamePicker from './namepicker'
 
-function App() {
-  const{messages, send} = useDatu()
+function App(){
+  useEffect(() =>{
+    const path = window.location.pathname
+    if(path.length<2) {
+      window.location.pathname='/home'
+    }
+  }, [])
+
+  return <BrowserRouter>
+    <Route path="/:room" component={Room}/>
+  </BrowserRouter>
+}
+
+function Room(props) {
+  const room=props.match.params.room
+  const{messages, send} = useDatu(room)
   console.log(messages)
   return (
     <main className="main">
@@ -15,6 +31,9 @@ function App() {
       <span>Let's Chat</span>
       <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Spartan"/>
+      <NamePicker 
+        onSend={(name)=> send({name, room})}
+      />
     </header>
 
     <div className="messages">
@@ -22,7 +41,7 @@ function App() {
     </div>
 
     <Footer 
-      onSend={(text)=> send({text:text})}
+      onSend={(text)=> send({text, room})}
     />
 
     </main>
@@ -33,13 +52,14 @@ export default App;
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWXVgUqm3xATyzqUqTxcpvsW7U804ctXI",
-  authDomain: "chatter20202020.firebaseapp.com",
-  databaseURL: "https://chatter20202020.firebaseio.com",
-  projectId: "chatter20202020",
-  storageBucket: "chatter20202020.appspot.com",
-  messagingSenderId: "630230183323",
-  appId: "1:630230183323:web:cc967f51fc79e394ca053e"
+  apiKey: "AIzaSyDzC-YzPje_34ElZKmYPvVKWnXq43VgkM0",
+  authDomain: "chatwsara.firebaseapp.com",
+  databaseURL: "https://chatwsara.firebaseio.com",
+  projectId: "chatwsara",
+  storageBucket: "chatwsara.appspot.com",
+  messagingSenderId: "358074175677",
+  appId: "1:358074175677:web:253a262b9c2538ea9927d4",
+  measurementId: "G-8N04ZF8LPT"
 };
 initialize(firebaseConfig)
 
