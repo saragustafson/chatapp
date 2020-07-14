@@ -21,6 +21,7 @@ function App(){
 
 function Room(props) {
   const room=props.match.params.room
+  const [name, setName] = useState('')
   const{messages, send} = useDatu(room)
   console.log(messages)
   return (
@@ -31,9 +32,7 @@ function Room(props) {
       <span>Let's Chat</span>
       <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Spartan"/>
-      <NamePicker 
-        onSend={(name)=> send({name, room})}
-      />
+      <NamePicker onSave={setName}/>
     </header>
 
     <div className="messages">

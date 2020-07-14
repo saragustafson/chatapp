@@ -72,24 +72,6 @@ button img {
     width: 25%;
 }
 
-.add-button{
-    background:white;
-    position:absolute;
-    top:8px;
-    right:27px;
-    width:21px;
-    height:21px;
-    border-radius:14px;
-    border-style:solid;
-    border-color:rgb(158,116,175);
-    padding:-1px;
-    font-size:16px;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
 .edit-button{
   background:white;
   position:absolute;
@@ -113,7 +95,10 @@ button img {
     display:flex;
     font-family: 'Spartan', sans-serif;
     font-size:14px;
-    color:black; 
+    color:black;
+    position:absolute;
+    top:10px;
+    right:40px;
 }
 
 footer {
