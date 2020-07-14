@@ -36,11 +36,15 @@ function Room(props) {
     </header>
 
     <div className="messages">
-      {messages.map((m,i)=> <Message key={i} text={m.text} />)}
+      {messages.map((m,i)=> 
+        <Message key={i} text={m.text} 
+        name={m.name} isMe={m.name===name}
+      />
+      )}
     </div>
 
     <Footer 
-      onSend={(text)=> send({text, room})}
+      onSend={(text)=> send({text, room, name})}
     />
 
     </main>

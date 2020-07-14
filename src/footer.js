@@ -21,7 +21,7 @@ function Footer(props){
                         setText('')
                     }
                 }}>
-                ↑
+                <img src="http://www.pngmart.com/files/3/Up-Arrow-PNG-Transparent-Image.png"/>
             </button>
         </footer>
     )
